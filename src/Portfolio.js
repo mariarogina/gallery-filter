@@ -11,18 +11,28 @@ export default class Portfolio extends Component {
 
  constructor(props) {
     super(props);
-    this.state = {selected: "All"};   
+    this.state = {selected: "All",
+  filters : ["All", "Websites", "Flayers", "Business Cards"],
+  projects:data
+};   
     
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(e) {
-    
-    this.setState({
-      selected: e.target.value
-    });
-  }
+    const filter = e.target.value;
+    this.setState({ selected: filter });
   
+  if (filter !== "All") {
+      const filteredProjects = data.filter(
+        (item) => item.category === filter
+      );
+      this.setState({ projects: filteredProjects });
+    } else {
+      this.setState({ projects: data })
+      
+    }  
+  };
    //onelist = this.state.selected=="All" ? this.data  : this.data.filter((item) => (item.category == this.selected));
   
   
@@ -34,13 +44,13 @@ export default class Portfolio extends Component {
      
       
           <Toolbar
-            filters={this.filters}
+            filters={this.state.filters}
             selected={this.state.selected}
             onSelectFilter={this.handleClick}
           />
     
         <Projectlist
-        data = {data}
+        data = {this.state.projects}
         selected={this.state.selected}
         
         

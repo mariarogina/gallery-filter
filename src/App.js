@@ -3,7 +3,8 @@ import './App.css';
 
 function App() {
   return (
-    <Portfolio/>
+    <div className="bigApp"><Portfolio/></div>
+    
   );
 }
 

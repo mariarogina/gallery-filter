@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { uuid } from 'uuidv4';
+
 
 export default class Projectlist extends Component {
   constructor(props) {
@@ -6,16 +8,11 @@ export default class Projectlist extends Component {
   }
 
   render() {
-    const onelist =
-      this.props.selected === "All"
-        ? this.props.data
-        : this.props.data.filter(
-            (item) => item.category === this.props.selected
-          );
-    const list = onelist.map((item) => (
+    
+    const list = this.props.data.map((item) => (
       <div
         className="col-lg-3 col-md-6 mb-2"
-     //   key={item.img}
+        key={uuid()}
         name={item.category}
       >
         
