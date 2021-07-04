@@ -20,7 +20,7 @@ export default class Toolbar extends Component {
                  
                     key={item + i}
                     
-                    name = {item}
+                    value = {item}
                     onClick={this.props.onSelectFilter}>
 
                     {item}

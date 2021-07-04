@@ -17,13 +17,13 @@ export default class Portfolio extends Component {
   }
 
   handleClick(e) {
-    debugger;
+    
     this.setState({
-      selected: e.target.name
+      selected: e.target.value
     });
   }
   
-  
+   //onelist = this.state.selected=="All" ? this.data  : this.data.filter((item) => (item.category == this.selected));
   
   
   render() {
@@ -42,6 +42,7 @@ export default class Portfolio extends Component {
         <Projectlist
         data = {data}
         selected={this.state.selected}
+        
         
         
         />
