@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 
 
 export default class ProjectList extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
 
   render() {
     
@@ -21,7 +19,7 @@ export default class ProjectList extends Component {
           style={{ width: "400px" }}
           className="img-fluid mb-4"
           src={item.img}
-        />
+          alt={item.category}       />
       </div>
     ));
 
