@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { uuid } from "uuidv4";
+import PropTypes from 'prop-types';
 
 export default class Toolbar extends Component {
   render() {
@@ -27,3 +28,9 @@ export default class Toolbar extends Component {
     return <div className="tool">{buttons}</div>;
   }
 }
+
+Toolbar.propTypes = {
+
+  filters: PropTypes.array,
+  onSelectFilter: PropTypes.func,
+  selected: PropTypes.string}

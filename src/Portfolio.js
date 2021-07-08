@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 import Toolbar from "./Toolbar";
 import Projectlist from "./Projectlist";
 import {data} from "./data.js"
@@ -33,8 +34,6 @@ export default class Portfolio extends Component {
       
     }  
   };
-   //onelist = this.state.selected=="All" ? this.data  : this.data.filter((item) => (item.category == this.selected));
-  
   
   render() {
    
@@ -51,7 +50,6 @@ export default class Portfolio extends Component {
     
         <Projectlist
         data = {this.state.projects}
-        selected={this.state.selected}
         
         
         

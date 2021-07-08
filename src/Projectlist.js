@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { uuid } from 'uuidv4';
+import PropTypes from 'prop-types';
 
 
 export default class Projectlist extends Component {
@@ -31,3 +32,7 @@ export default class Projectlist extends Component {
     );
   }
 }
+
+Projectlist.propTypes = {
+
+  data: PropTypes.array}
