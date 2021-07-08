@@ -3,7 +3,7 @@ import uuid from 'react-uuid'
 import PropTypes from 'prop-types';
 
 
-export default class Projectlist extends Component {
+export default class ProjectList extends Component {
   constructor(props) {
     super(props);
   }
@@ -33,6 +33,6 @@ export default class Projectlist extends Component {
   }
 }
 
-Projectlist.propTypes = {
+ProjectList.propTypes = {
 
   data: PropTypes.array}

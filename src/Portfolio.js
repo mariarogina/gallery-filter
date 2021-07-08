@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-
-
-import Toolbar from "./Toolbar";
-import Projectlist from "./Projectlist";
+import ToolBar from "./ToolBar";
+import ProjectList from "./ProjectList";
 import {data} from "./data.js"
 import "./App.css";
 
@@ -42,15 +40,14 @@ export default class Portfolio extends Component {
       <div className="app" style={{display:"flex", flexWrap:"wrap"}} >
      
       
-          <Toolbar
+          <ToolBar
             filters={this.state.filters}
             selected={this.state.selected}
             onSelectFilter={this.handleClick}
           />
     
-        <Projectlist
+        <ProjectList
         data = {this.state.projects}
-        
         
         
         />
