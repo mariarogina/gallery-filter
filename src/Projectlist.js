@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { uuid } from 'uuidv4';
+import uuid from 'react-uuid'
 import PropTypes from 'prop-types';
 
 
