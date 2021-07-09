@@ -35,4 +35,5 @@ ToolBar.propTypes = {
 ToolBar.defaultProps = {
   filters: ["All", "Websites", "Flayers", "Business Cards"],
   selected: "All",
+  onSelectFilter: () => {},
 };
