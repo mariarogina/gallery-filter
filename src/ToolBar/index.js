@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-import uuid from 'react-uuid'
-import PropTypes from 'prop-types';
+import uuid from "react-uuid";
+import PropTypes from "prop-types";
 
 export default class ToolBar extends Component {
   render() {
-
-
     const buttons = this.props.filters.map((item) => {
-
-        const active = this.props.selected === item;
-        const clazz = active ? "btn-secondary" : "btn-outline-secondary";
+      const active = this.props.selected === item;
+      const clazz = active ? "btn-secondary" : "btn-outline-secondary";
 
       return (
         <button
@@ -30,7 +27,12 @@ export default class ToolBar extends Component {
 }
 
 ToolBar.propTypes = {
-
   filters: PropTypes.array,
   onSelectFilter: PropTypes.func,
-  selected: PropTypes.string}
+  selected: PropTypes.string,
+};
+
+ToolBar.defaultProps = {
+  filters: ["All", "Websites", "Flayers", "Business Cards"],
+  selected: "All",
+};
