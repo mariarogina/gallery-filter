@@ -26,8 +26,9 @@ export default function ProjectList({ data }) {
 }
 
 ProjectList.propTypes = {
-  data: PropTypes.array,
-};
+  data: PropTypes.array
+}
+
 ProjectList.defaultProps = {
   data: [{
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/mon.jpg",
@@ -80,5 +81,5 @@ ProjectList.defaultProps = {
   }, {
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/place200x290_3.png",
     category: "Flayers"
-  }],
+  }]
 };

@@ -29,11 +29,11 @@ export default class ToolBar extends Component {
 ToolBar.propTypes = {
   filters: PropTypes.array,
   onSelectFilter: PropTypes.func,
-  selected: PropTypes.string,
+  selected: PropTypes.string
 };
 
 ToolBar.defaultProps = {
   filters: ["All", "Websites", "Flayers", "Business Cards"],
   selected: "All",
-  onSelectFilter: () => {},
+  onSelectFilter: () => {}
 };

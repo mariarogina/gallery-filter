@@ -11,7 +11,7 @@ export default class Portfolio extends Component {
     this.state = {
       selected: "All",
       filters: ["All", "Websites", "Flayers", "Business Cards"],
-      projects: data,
+      projects: data
     };
 
     this.handleClick = this.handleClick.bind(this);
